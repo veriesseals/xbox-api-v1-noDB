@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Xbox Games</title>
+</head>
+<body>
+    <main class="main main-games">
+        <div class="container ">
+            <h1 class="header-h1">All Xbox Games</h1>
+            <a href="/"><b>Back to Home</b></a>
+            <ul class="gameStack">
+                <hr>
+                <% for (let i = 0; i < games.length; i++) { %>
+                    <p><b>Game:</b></p>
+                    <li class="list-item d-flex"><b><u><%= games[i].name %></u></b></li> 
+                    <p><b>Genre:</b></p>
+                    <li class="list-item d-flex"><%= games[i].genre %></li> 
+                    <p><b>Developer:</b></p>
+                    <li class="list-item d-flex"><%= games[i].developers %></li> 
+                    <p><b>Release Date:</b></p>
+                <li class="list-item d-flex"><%= games[i].releaseDates %></li>
+                <hr>
+                <% } %>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="colophon">site by Veries Seals III &copy; 2023</p>
+            <p class="footer-p">Back to <a href="#top">Top</a></p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
